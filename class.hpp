@@ -1,13 +1,14 @@
-#ifndef CLASS_HPP_INCLUDED
-#define CLASS_HPP_INCLUDED
+#ifndef DEFF_PERSONNAGE
+#define DEFF_PERSONNAGE
 #include <string>
 #include<iostream>
+#include"arme.hpp"
 class Personnage
 {
+private :
     int m_vie;
     int m_mana;
-    std::string m_nomArme;
-    int m_degatArme;
+    Arme m_arme;
 public :
     Personnage();
     Personnage(std::string nomArme, int degatArme); //constructeur pour init les attributs!
@@ -15,11 +16,11 @@ public :
     void attaquer(Personnage &cible);
     void boirePotionDeVie(int quantitePotion);
     void changerArme(std::string nomNouvelleArme, int degatsNouvelleArme);
-    bool estVivant();
-
+    bool estVivant() const;
+    void afficherEtat() const;
 };
 
 
 
 
-#endif //CLASS_HPP_INCLUDED
+#endif
