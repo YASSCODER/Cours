@@ -16,8 +16,8 @@ public:
 //Méthode :
 void ajouter();
 void afficher();
-void rechercher(int m_CIN);
-void supprimmer(int m_CIN);
+bool rechercher();
+void supprimmer();
 void afficher_classe();
 //constructeurs :
     Ecole(/* args */);

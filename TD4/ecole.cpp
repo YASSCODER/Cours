@@ -32,13 +32,55 @@ void Ecole::afficher()
     }
     cout<<endl;
 }
-/*void Ecole::rechercher(int m_CIN)
+
+bool Ecole::rechercher()
 {
-    cout<<"CIN de l'etudiant à chercher : ";
+    int i,m_CIN;
+    cout<<"CIN a chercher : ";
     cin>>m_CIN;
-    while()
+    while(i<E.size())
+    {
+        i++;
+    }
+    if(E[i].getCin()!=m_CIN)
+        {
+            return true;
+        }
+    else
+        return false;
+
+}
+
+void Ecole::supprimmer()
+{
     
-}*/
+    for(vector <Etudiant>::iterator it=E.begin();it!=E.end();++it)
+    {
+        if(rechercher()==true)
+        {
+            E.erase(it);
+            cout<<"suppression avec succe !"<<endl;
+        }
+        else   
+        cout<<"element introuvable !"<<endl;
+    }
+    
+}
+
+void Ecole::afficher_classe()
+{
+    int i;
+    string m_classe;
+    cout<<"donner la classe a afficher : ";
+    cin>>m_classe;
+    for(i=0;i<E.size();i++)
+    {
+        if(E[i].getClasse()==m_classe)
+        E[i].afficher();
+        cout<<endl;
+    }
+    cout<<endl;
+}
 Ecole::Ecole(/* args */)
 {
 }
